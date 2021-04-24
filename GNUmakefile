@@ -22,7 +22,6 @@ KEYMAP = 60_ansi
 
 compile:
 	$(QMK) compile \
-		--clean \
-		--parallel $(shell nproc)
+		--clean
 
 .PHONY: compile
