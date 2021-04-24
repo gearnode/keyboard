@@ -19,8 +19,9 @@ KEYBOARD = dz60
 KEYMAP = 60_ansi
 
 compile:
-	$(QMK) compile --keyboard $(KEYBOARD) \
-		       --keymap $(KEYMAP) \
-		       --parallel $(shell nproc)
+	$(QMK) compile \
+		--keyboard $(KEYBOARD) \
+		--keymap $(KEYMAP) \
+		--parallel $(shell nproc)
 
 .PHONY: compile
