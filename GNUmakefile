@@ -17,9 +17,6 @@
 QMK = qmk \
 	--config-file $(CURDIR)/qmk.ini
 
-KEYBOARD = dz60
-KEYMAP = 60_ansi
-
 setup:
 	$(QMK) setup \
 		--home $(CURDIR)/qmk_firmware \
