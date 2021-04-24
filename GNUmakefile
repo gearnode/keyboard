@@ -20,8 +20,15 @@ QMK = qmk \
 KEYBOARD = dz60
 KEYMAP = 60_ansi
 
+setup:
+	$(QMK) setup \
+		--home $(CURDIR)/qmk_firmware \
+		--yes
 compile:
 	$(QMK) compile \
 		--clean
 
-.PHONY: compile
+clean:
+	$(RM) -rf qmk_firmware
+
+.PHONY: setup compile clean
