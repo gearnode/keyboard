@@ -25,7 +25,11 @@ compile:
 	$(QMK) compile \
 		--clean
 
+doctor:
+	$(QMK) doctor \
+		--yes
+
 clean:
 	$(RM) -rf qmk_firmware
 
-.PHONY: setup compile clean
+.PHONY: setup compile doctor clean
